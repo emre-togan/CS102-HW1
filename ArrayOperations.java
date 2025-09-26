@@ -26,7 +26,7 @@ public class ArrayOperations{
 
     }
 
-    public static void diffFromAve(int[] array){
+    public static int[] diffFromAve(int[] array){
         int sum = 0;
         int[] aveArr = new int[array.length];
 
@@ -39,7 +39,7 @@ public class ArrayOperations{
             aveArr[j] = array[j] - sum;
         }
 
-        System.out.println(Arrays.toString(aveArr));
+        return aveArr;
     }
 
     public static int sumOfOdds( int[] numbers){
