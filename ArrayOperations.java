@@ -50,12 +50,24 @@ public class ArrayOperations{
         
     }
 
-    public static int arrayMin(int[] array){
-
+    public static int arrayMin(int[] arr){
+        int min = arr[0];
+        for (int number : arr){
+            if (number < min){
+                min = number;
+            }
+        }
+        return min;
     }
 
-    public static int arrayMax(int[] array){
-
+    public static int arrayMax(int[] arr){
+        int max = arr[0];
+        for (int number : arr){
+            if (number > max){
+                max = number;
+            }
+        }
+        return max;
     }
 
     public static int[] diffFromAve(int[] array){
