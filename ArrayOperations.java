@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -25,8 +26,20 @@ public class ArrayOperations{
 
     }
 
-    public static int[] diffFromAve(){
-        
+    public static void diffFromAve(int[] array){
+        int sum = 0;
+        int[] aveArr = new int[array.length];
+
+        for(int i = 0; i < array.length; i++){
+            sum += array[i];
+
+        }
+
+        for(int j = 0; j < array.length; j++){
+            aveArr[j] = array[j] - sum;
+        }
+
+        System.out.println(Arrays.toString(aveArr));
     }
 
     public static int sumOfOdds( int[] numbers){
