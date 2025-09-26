@@ -51,11 +51,11 @@ public class ArrayOperations{
     }
 
     public static int arrayMin(int[] array){
-        return 5;
+
     }
 
     public static int arrayMax(int[] array){
-        return 5;
+
     }
 
     public static int[] diffFromAve(int[] array){
