@@ -15,15 +15,47 @@ public class ArrayOperations{
             int randomNum = random.nextInt(101);
             array[i] = randomNum;
         }
+
+        int choice = 0;
+
+        System.out.println(Arrays.toString(array));
+
+        while(choice != 4){
+        
+        System.out.println("1- Find the array's min and max");
+        System.out.println("2- Find the differences from average");
+        System.out.println("3- Find the sum of even and odd elements");
+        System.out.println("4- Exit");
+        System.out.print("Enter your choice: ");
+        choice = scanner.nextInt();
+
+        if(choice == 1){
+            System.out.println("Array min is " + arrayMin(array));
+            System.out.println("Array max is " +  arrayMax(array));
+        }
+
+        if(choice == 2){
+            System.out.println("The differences: " + Arrays.toString(diffFromAve(array)));
+        }
+        
+        if(choice == 3){
+            System.out.println("Sum of odds: " + sumOfOdds(array));
+            System.out.println("Sum of evens: " +  sumOfEvens(array));
+        }
+    }
+    System.out.println("Successfully Logged Out!");
+    
+
+    scanner.close();
         
     }
 
-    public static int[] arrayMin(){
-
+    public static int arrayMin(int[] array){
+        return 5;
     }
 
-    public static int[] arrayMax(){
-
+    public static int arrayMax(int[] array){
+        return 5;
     }
 
     public static int[] diffFromAve(int[] array){
@@ -35,8 +67,11 @@ public class ArrayOperations{
 
         }
 
+        int ave = sum / array.length;
+
+        System.out.println("The average is: " + ave);
         for(int j = 0; j < array.length; j++){
-            aveArr[j] = array[j] - sum;
+            aveArr[j] = array[j] - ave;
         }
 
         return aveArr;
